@@ -36,12 +36,6 @@ public class BookController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(bookService.save(book));
 	}
 	
-	@GetMapping
-	@RequestMapping(value = "/api/books/credentials-user")
-	public String welcome() {
-		return "welcome";
-	}
-	
 	//Read a book
 	@GetMapping
 	@RequestMapping(value = "/api/books/{id}", method = RequestMethod.GET)

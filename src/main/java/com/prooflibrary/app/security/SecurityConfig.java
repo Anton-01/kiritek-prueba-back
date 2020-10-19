@@ -19,7 +19,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
-		.antMatchers("/api/books/credentials-user").hasRole("kiritekadmin")
 		.antMatchers("/api/comments/post").hasRole("kiritekadmin")
 		.and().httpBasic();
 	}
